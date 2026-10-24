@@ -13,7 +13,7 @@ while True:
 distance = 10
 days = 1
 
-while distance < 200:
+while distance <= 200:
     distance += distance * (p / 100)
     days += 1
 
