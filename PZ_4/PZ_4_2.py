@@ -2,20 +2,22 @@
 
 while True:
     try:
-        p = int(input("Введите процент увеличения пробега: "))
-        if 0 < p <= 50:
+        p = float(input("Введите процент увеличения пробега: "))
+        if 0 < p < 50:
             break
         else:
-            print("Процент должен быть в диапазоне от 0 до 50.")
+            print("Процент должен быть больше 0 и меньше 50.")
     except ValueError:
         print("Введите правильное число.")
 
-distance = 10
+distance = 10.0
+total_distance = distance
 days = 1
 
-while distance <= 200:
+while total_distance <= 200:
     distance += distance * (p / 100)
+    total_distance += distance
     days += 1
 
 print("Количество дней:", days)
-print("Суммарный пробег:", distance)
+print("Суммарный пробег:", total_distance)
