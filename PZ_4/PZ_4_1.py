@@ -16,8 +16,9 @@ while True:
         b = input("Введите число B: ")
 if a < b:
     c = 1
-    for i in range(a, b + 1):
-        c *= i
+    while a <= b:
+        c *= a
+        a += 1
     print("Произведение всех целых чисел от A до B включительно:", c)
 else:
     print("Число A должно быть меньше числа B.")
